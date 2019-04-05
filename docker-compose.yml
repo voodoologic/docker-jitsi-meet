@@ -9,7 +9,7 @@ services:
             - '${HTTPS_PORT}:443'
         volumes:
             - ${CONFIG}/web:/config
-        container_name: meetup_server
+        container_name: meet_web
         environment:
             - ENABLE_AUTH
             - ENABLE_GUESTS
