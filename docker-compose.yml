@@ -9,6 +9,7 @@ services:
             - '${HTTPS_PORT}:443'
         volumes:
             - ${CONFIG}/web:/config
+        container_name: meetup_server
         environment:
             - ENABLE_AUTH
             - ENABLE_GUESTS
@@ -26,6 +27,7 @@ services:
             - TZ
         networks:
             meet.jitsi:
+            reverse_proxy:
 
     # XMPP server
     prosody:
